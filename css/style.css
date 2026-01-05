@@ -1,0 +1,570 @@
+:root {
+  --bg-black: #0b0b0b;
+  --bg-dark: #111111;
+  --text-white: #ffffff;
+  --text-gray: #b3b3b3;
+  --accent-red: #c1121f;
+}
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =====================
+   THEME VARIABLES
+===================== */
+:root {
+  --bg-black: #0b0b0b;
+  --bg-dark: #111111;
+  --text-white: #ffffff;
+  --text-gray: #b3b3b3;
+  --accent-red: #c1121f;
+}
+
+/* =====================
+   COMMON UTILITIES
+===================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-gray);
+  font-size: 15px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* =====================
+   HEADER / NAVBAR
+===================== */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(11, 11, 11, 0.95);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  color: var(--accent-red);
+  font-size: 18px;
+}
+
+.logo-text {
+  font-size: 16px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  font-size: 14px;
+  color: var(--text-gray);
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--text-white);
+}
+
+/* Button */
+.btn-primary {
+  background-color: var(--accent-red);
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a50e18;
+}
+.hero {
+  padding-top: 180px;
+}
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../assets/images/hero.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--accent-red);
+}
+
+.hero p {
+  font-size: 15px;
+  margin-bottom: 35px;
+  max-width: 500px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: black;
+}
+
+/* =====================
+   ABOUT SECTION
+===================== */
+.about {
+  background-color: var(--bg-dark);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-text h2 span {
+  color: var(--accent-red);
+}
+
+.about-text p {
+  max-width: 500px;
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat h3 {
+  font-size: 32px;
+  color: var(--text-white);
+}
+
+.stat span {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+/* =====================
+   ARTISTS SECTION
+===================== */
+.artists {
+  background-color: var(--bg-black);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.section-header h2 span {
+  color: var(--accent-red);
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.artist-card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+}
+
+.artist-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.artist-card:hover img {
+  transform: scale(1.08);
+}
+
+.artist-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.artist-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.artist-info span {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+/* =====================
+   WORKS / PORTFOLIO
+===================== */
+.works {
+  background-color: var(--bg-dark);
+}
+
+/* Filters */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--text-gray);
+  color: var(--text-gray);
+  padding: 8px 18px;
+  font-size: 13px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--accent-red);
+  border-color: var(--accent-red);
+  color: white;
+}
+
+/* Grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.work-item {
+  overflow: hidden;
+  background-color: var(--bg-black);
+}
+
+.work-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.work-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Hide items */
+.work-item.hide {
+  display: none;
+}
+/* =====================
+   SAFETY SECTION
+===================== */
+.safety {
+  background-color: var(--bg-black);
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.safety-card {
+  background-color: var(--bg-dark);
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.safety-card:hover {
+  transform: translateY(-6px);
+}
+
+.safety-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.safety-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.safety-card p {
+  font-size: 14px;
+}
+/* =====================
+   BOOKING SECTION
+===================== */
+.booking {
+  background-color: var(--bg-dark);
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Text */
+.booking-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.booking-text h2 span {
+  color: var(--accent-red);
+}
+
+.booking-text p {
+  max-width: 400px;
+}
+
+/* Form */
+.booking-form {
+  background-color: var(--bg-black);
+  padding: 40px;
+  border-radius: 6px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  border: 1px solid #333;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #777;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-red);
+}
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background-color: var(--bg-black);
+  padding-top: 80px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+  font-size: 14px;
+  color: var(--text-gray);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #222;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+
+
+@media (max-width: 1024px) {
+  .artist-grid,
+  .works-grid,
+  .safety-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* mobile menu can be added later */
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .artist-grid,
+  .works-grid,
+  .safety-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 16px;
+  }
+}
