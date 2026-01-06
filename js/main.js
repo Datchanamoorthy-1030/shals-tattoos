@@ -37,3 +37,20 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
     mobileMenu.classList.remove('active');
   });
 });
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 100;
+
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
