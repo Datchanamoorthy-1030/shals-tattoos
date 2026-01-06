@@ -1,10 +1,4 @@
-:root {
-  --bg-black: #0b0b0b;
-  --bg-dark: #111111;
-  --text-white: #ffffff;
-  --text-gray: #b3b3b3;
-  --accent-red: #c1121f;
-}
+
 /* =====================
    GLOBAL RESET
 ===================== */
@@ -77,7 +71,7 @@ a {
   top: 0;
   left: 0;
   background-color: rgba(11, 11, 11, 0.95);
-  z-index: 1000;
+  z-index: 1100;
 }
 
 .header-container {
@@ -134,15 +128,14 @@ a {
 .btn-primary:hover {
   background-color: #a50e18;
 }
-.hero {
-  padding-top: 180px;
-}
+
 /* =====================
    HERO SECTION
 ===================== */
 .hero {
   position: relative;
   height: 100vh;
+  padding-top: 180px;
   background: url("../assets/images/hero.png") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -512,6 +505,65 @@ a {
   text-align: center;
   font-size: 13px;
   color: #777;
+}
+/* =====================
+   HAMBURGER MENU
+===================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: var(--bg-black);
+  padding: 30px 0;
+  text-align: center;
+  z-index: 1100;
+}
+
+.mobile-menu a {
+  display: block;
+  margin: 15px 0;
+  font-size: 16px;
+}
+.desktop-btn {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .desktop-btn {
+    display: none;
+  }
+}
+
+
+/* Show on mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
 }
 
 
